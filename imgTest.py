@@ -29,7 +29,4 @@ for images in os.listdir(folder_dir):
           #i.show()
          #print(images)
          
-
-
-
 gui.mainloop()
