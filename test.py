@@ -31,6 +31,7 @@ print(image_path)
 for images in os.listdir(image_path):
     # check if the image ends with png
     if (images.endswith(".jpg")):
+        images = os.path.join(image_path,images)
         a = Image.open(images)
         a.save(str(x)+".jpg",quality=USER_INP)
         x+=1

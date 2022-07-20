@@ -13,14 +13,20 @@ gui = Tk()
 gui.title('imgTest')
 gui.geometry('500x300')
 
+frame = Frame(gui, width=50,height=50)
+frame.pack()
+frame.place(anchor='center',relx=0.5, rely=0.5)
 
 for images in os.listdir(folder_dir):
 
 	# check if the image ends with png
-	if (images.endswith(".png")):
-          images = os.path.join(folder_dir,images)
-          i =  Image.open(images)       
-          i.show()
+	if (images.endswith(".jpg")):
+          images = os.path.join(folder_dir,images) # opens the image
+          i =  Image.open(images)
+          i.thumbnail((100,100))
+          img = ImageTk.PhotoImage(i)
+          Label(frame, image=img).pack()       
+          #i.show()
          #print(images)
          
 

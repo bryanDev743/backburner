@@ -5,11 +5,11 @@ from PIL import ImageTk, Image
 top = Tk()
 
 top.title('Gui')
-top.geometry('400x400')
+top.geometry('400x220')
 
-frame = Frame(top, width=50,height=50)
-frame.pack()
-frame.place(anchor='center',relx=0.5, rely=0.5)
+# frame = Frame(top, width=50,height=50)
+# frame.pack()
+# frame.place(anchor='center',relx=0.5, rely=0.5)
 
 i = Image.open('resources/fire.png')
 i.thumbnail((100,100))
