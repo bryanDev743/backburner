@@ -6,6 +6,7 @@ top = Tk()
 
 top.title('Gui')
 top.geometry('400x220')
+top.resizable(False,False)
 
 # frame = Frame(top, width=50,height=50)
 # frame.pack()
